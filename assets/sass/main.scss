@@ -1,8 +1,10 @@
 @import '../vendor/materialize-src/sass/materialize';
 
+// Utils
+@import 'utils/spacing';
+
 // Components
 @import 'footer';
-@import 'hero';
 
 // Main Layout
 body {

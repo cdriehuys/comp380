@@ -18,14 +18,6 @@
 
     <footer class="footer">
       <div class="container">
-        <p><strong>Credits</strong></p>
-        {{ if (isset .Params "credits") }}
-          <ul>
-            {{ range .Params.credits }}
-              <li><a href="{{ .link }}" rel="noopener noreferrer" target="_blank">{{ .text }}</a></li>
-            {{ end }}
-          </ul>
-        {{ end }}
         <p class="center-align grey-text">Copyright (&copy;) Chathan Driehuys, Elijah Long, &amp; Kai Marcus 2018. All rights reserved.</p>
       </div>
     </footer>
