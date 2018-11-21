@@ -1,0 +1,76 @@
+@import '../vendor/materialize-src/sass/components/variables';
+
+$hero-background: rgba(0, 0, 0, .75);
+$hero-color: #dcdcdc;
+$hero-height: 100vh;
+
+.hero {
+  background-position: right top;
+  background-size: cover;
+  height: $hero-height;
+}
+
+.hero__content {
+  background: $hero-background;
+  box-shadow: 0 0 50px 100px $hero-background;
+  border-radius: .25em;
+  bottom: 15em;
+  color: $hero-color;
+  left: 50%;
+  padding: 1em;
+  position: absolute;
+  text-align: center;
+  transform: translateX(-50%);
+
+  @media #{$large-and-up} {
+    bottom: auto;
+    left: 33%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.hero__cta-button {
+  border: 1px solid $hero-color;
+  border-radius: 2em;
+  color: $hero-color;
+  display: block;
+  padding: .25em 1em;
+  transition: all .25s;
+
+  &:hover {
+    background: $hero-color;
+    color: $hero-background;
+  }
+
+  @media #{$medium-and-up} {
+    font-size: 1.5rem;
+  }
+}
+
+.hero__divider {
+  color: transparentize($hero-color, .5);
+  margin: 2em 0;
+}
+
+.hero__more_content {
+  color: $hero-color;
+  left: 50%;
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+.hero__title {
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+
+  @media #{$medium-and-up} {
+    font-size: 2.5rem;
+  }
+
+  @media #{$large-and-up} {
+    font-size: 3rem;
+  }
+}

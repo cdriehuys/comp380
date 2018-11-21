@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width">
+
+    <title>{{ .Page.Title }}</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+  </head>
+  <body>
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p><strong>Credits</strong></p>
+        {{ if (isset .Params "credits") }}
+          <ul>
+            {{ range .Params.credits }}
+              <li><a href="{{ .link }}" rel="noopener noreferrer" target="_blank">{{ .text }}</a></li>
+            {{ end }}
+          </ul>
+        {{ end }}
+        <p class="center-align grey-text">Copyright (&copy;) Chathan Driehuys, Elijah Long, &amp; Kai Marcus 2018. All rights reserved.</p>
+      </div>
+    </footer>
+
+    {{ $js := resources.Get "vendor/materialize-src/js/bin/materialize.min.js" }}
+    {{ $secureJS := $js | resources.Fingerprint "sha512" }}
+    <script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
+  </body>
+</html>
