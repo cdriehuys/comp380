@@ -34,6 +34,10 @@ $spacer: 1em;
     margin-top: $space;
   }
 
+  .pl-#{$i} {
+    padding-left: $space;
+  }
+
   .py-#{$i} {
     padding-bottom: $space;
     padding-top: $space;
