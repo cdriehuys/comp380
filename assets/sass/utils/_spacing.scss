@@ -34,8 +34,16 @@ $spacer: 1em;
     margin-top: $space;
   }
 
+  .p-#{$i} {
+    padding: $space;
+  }
+
   .pl-#{$i} {
     padding-left: $space;
+  }
+
+  .pt-#{$i} {
+    padding-top: $space;
   }
 
   .py-#{$i} {

@@ -20,17 +20,19 @@
         <a href="https://haveibeenpwned.com/" rel="noopener noreferrer" target="_blank">Have I Been Pwned</a>.
       </p>
 
-      <div class="row">
-        <form onsubmit="return false;">
-          <div class="input-field inline col s12 m6 offset-m2 l5 offset-l3">
-            <input class="validate" id="email" type="email">
-            <label for="email">Email Address</label>
-          </div>
+      <div id="hibp-form" style="display: none;">
+        <div class="row">
+          <form>
+            <div class="input-field inline col s12 m6 offset-m2 l5 offset-l3">
+              <input class="validate" id="email" name="email" type="email">
+              <label for="email">Email Address</label>
+            </div>
 
-          <div class="col s12 m2 l1 center-align">
-            <button class="btn btn-large blue" type="submit">Submit</button>
-          </div>
-        </form>
+            <div class="col s12 m2 l1 center-align">
+              <button class="btn btn-large blue" type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -40,4 +42,14 @@
       {{ .Content }}
     </div>
   </section>
+{{ end }}
+
+{{ define "scripts_extra" }}
+  {{ $js := resources.Get "js/hibp.js" | minify | fingerprint "sha512" }}
+  <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      initHIBP('#hibp-form');
+    });
+  </script>
 {{ end }}
