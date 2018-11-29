@@ -1,21 +1,19 @@
 {{ define "main" }}
   <section class="blue py-5" id="intro">
-    <div class="container row">
-      <div class="col s12 l8 offset-l2 center-align">
-        <i class="material-icons large grey-text text-darken-4">lock</i>
-        <h1 class="grey-text text-darken-3">{{ .Params.tagline }}</h1>
-        <p class="grey-text text-darken-4 flow-text">
-          {{ .Params.lead }}
-        </p>
-      </div>
+    <div class="container center-align">
+      <i class="material-icons large grey-text text-darken-4">lock</i>
+      <h1 class="grey-text text-darken-3">{{ .Params.tagline }}</h1>
+      <p class="grey-text text-darken-4 flow-text">
+        {{ .Params.lead }}
+      </p>
     </div>
   </section>
 
   <section class="grey lighten-3 py-5">
-    <div class="container row">
+    <div class="container">
       <h3 class="center-align">Has Your Data Been Leaked?</h3>
 
-      <p class="flow-text col s12 m10 offset-m1 l8 offset-l2">
+      <p class="flow-text">
         Check if any data associated with your email address has been exposed using
         <a href="https://haveibeenpwned.com/" rel="noopener noreferrer" target="_blank">Have I Been Pwned</a>.
       </p>
@@ -37,8 +35,8 @@
     </div>
   </section>
 
-  <section class="container row py-5">
-    <div class="col s12 m10 offset-m1 l8 offset-l2 flow-text">
+  <section class="container py-5">
+    <div class="flow-text">
       {{ .Content }}
     </div>
   </section>

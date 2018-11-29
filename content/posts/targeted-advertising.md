@@ -3,8 +3,6 @@ title: Targeted Advertising
 menu: main
 ---
 
-# Targeted Advertising
-
 Companies collect your data because of reasons. They do stuff with it to enhance their stuff. If they gather data they can personalize your ads and make more money.
 
 They have many methods of doing this. They can do stuff or they can do things. Things are particularly effective because they are difficult for the user to block. There are also concerns that users don't know their data is being collected and stuff. What do footnotes[^example] look like?

@@ -10,12 +10,16 @@
     {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
     {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options | fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+    {{ if .Page.HasShortcode "breach-timeline" }}
+    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    {{ end }}
   </head>
   <body>
     <header>
       <nav class="grey darken-4">
         <div class="container nav-wrapper">
-          <a href="{{ .Site.BaseURL }}" class="brand-logo">
+          <a href="{{ "/" | relURL }}" class="brand-logo">
             <i class="material-icons grey-text text-lighten-4">lock</i>
           </a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger">
@@ -23,7 +27,7 @@
           </a>
           {{ $currentPage := . }}
           <ul class="right hide-on-med-and-down">
-            <li {{ if .IsHome }}class="active"{{ end }}><a href="{{ .Site.BaseURL }}">Home</a></li>
+            <li {{ if .IsHome }}class="active"{{ end }}><a href="{{ "/" | relURL }}">Home</a></li>
             {{ range .Site.Menus.main }}
               <li {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}class="active"{{end}}>
                 <a href="{{ .URL }}" title="{{ .Title }}">
@@ -69,6 +73,15 @@
         $('.sidenav').sidenav();
       });
     </script>
+
+    {{ if .HasShortcode "breach-timeline" }}
+      <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+      {{ $initTimeline := resources.Get "js/breachTimeline.js" | minify | fingerprint }}
+      <script type="text/javascript" src="{{ $initTimeline.Permalink }}" integrity="{{ $initTimeline.Data.Integrity }}"></script>
+      <script type="text/javascript">
+        populateTimeline('timeline-embed');
+      </script>
+    {{ end }}
 
     {{ block "scripts_extra" . }}{{ end }}
   </body>
