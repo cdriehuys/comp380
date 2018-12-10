@@ -1,6 +1,26 @@
 .article {
   font-size: 1.15em;
   line-height: 1.618;
+
+  & ul {
+    margin-left: 1em;
+
+    & li {
+      list-style: disc inside;
+
+      & li {
+        list-style-type: circle;
+
+        & li {
+          list-style-type: square;
+
+          & li {
+            list-style-type: '– ';
+          }
+        }
+      }
+    }
+  }
 }
 
 .article__title {
