@@ -1,11 +1,30 @@
+@import '../vendor/bootstrap-4.0.0/scss/variables';
+
+
 .article {
   font-size: 1.15em;
   line-height: 1.618;
-  margin-bottom: 3em;
+  margin: 0 auto 3em auto;
+  max-width: 50rem;
+
+  & blockquote {
+    border-left: 3px solid map_get($theme-colors, "secondary");
+    font-style: italic;
+    padding-left: 1em;
+  }
 
   & .footnotes {
     font-size: 1rem;
     line-height: 1;
+    margin-top: 3em;
+
+    & li {
+      margin-bottom: 1em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
