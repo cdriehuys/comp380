@@ -12,52 +12,21 @@
     <link rel="stylesheet" href="{{ $style.Permalink }}">
 
     {{ if .Page.HasShortcode "breach-timeline" }}
-    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+      <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
     {{ end }}
   </head>
   <body>
     <header>
-      <nav class="grey darken-4">
-        <div class="container nav-wrapper">
-          <a href="{{ "/" | relURL }}" class="brand-logo">
-            <i class="material-icons grey-text text-lighten-4">lock</i>
-          </a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-            <i class="material-icons">menu</i>
-          </a>
-          {{ $currentPage := . }}
-          <ul class="right hide-on-med-and-down">
-            <li {{ if .IsHome }}class="active"{{ end }}><a href="{{ "/" | relURL }}">Home</a></li>
-            {{ range .Site.Menus.main }}
-              <li {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}class="active"{{end}}>
-                <a href="{{ .URL }}" title="{{ .Title }}">
-                {{- .Name -}}
-                </a>
-              </li>
-            {{ end }}
-          </ul>
-        </div>
-      </nav>
-
-      <ul class="sidenav" id="mobile-demo">
-        <li {{ if .IsHome }}class="active"{{ end }}><a href="{{ .Site.BaseURL }}">Home</a></li>
-        {{ range .Site.Menus.main }}
-          <li {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}class="active"{{end}}>
-            <a href="{{ .URL }}" title="{{ .Title }}">
-              {{- .Name -}}
-            </a>
-          </li>
-        {{ end }}
-      </ul>
+      {{ block "header" . }}{{ partial "header" . }}{{ end }}
     </header>
 
     <main>
       {{ block "main" . }}{{ end }}
     </main>
 
-    <footer class="footer">
-      <div class="container">
-        <p class="center-align grey-text">Copyright (&copy;) Chathan Driehuys, Elijah Long, &amp; Kai Marcus 2018. All rights reserved.</p>
+    <footer class="bg-dark">
+      <div class="container pt-3">
+        <p class="text-center text-secondary">Copyright (&copy;) Chathan Driehuys, Elijah Long, &amp; Kai Marcus 2018. All rights reserved.</p>
       </div>
     </footer>
 
@@ -65,15 +34,10 @@
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    {{ $js := resources.Get "vendor/materialize-src/js/bin/materialize.min.js" }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    {{ $js := resources.Get "vendor/bootstrap-4.0.0/dist/js/bootstrap.min.js" }}
     {{ $secureJS := $js | resources.Fingerprint "sha512" }}
-    <script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $('.sidenav').sidenav();
-      });
-    </script>
-
     {{ if .HasShortcode "breach-timeline" }}
       <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
       {{ $initTimeline := resources.Get "js/breachTimeline.js" | minify | fingerprint }}

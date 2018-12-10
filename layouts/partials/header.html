@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="{{ "/" | relURL }}">
+      <i class="material-icons">lock</i>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar-content">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item {{ if .IsHome }}active{{ end }}">
+          <a class="nav-link" href="{{ relURL "/" }}">Home</a></li>
+        </li>
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+          <li class="nav-item {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }}">
+            <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+
+  <!--
+  <div class="container nav-wrapper">
+    <a href="{{ "/" | relURL }}" class="brand-logo">
+    <i class="material-icons grey-text text-lighten-4">lock</i>
+    </a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+      <i class="material-icons">menu</i>
+    </a>
+    {{ $currentPage := . }}
+    <ul class="right hide-on-med-and-down">
+      <li {{ if .IsHome }}class="active"{{ end }}><a href="{{ "/" | relURL }}">Home</a></li>
+      {{ range .Site.Menus.main }}
+      <li {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}class="active"{{end}}>
+      <a href="{{ .URL }}" title="{{ .Title }}">
+        {{- .Name -}}
+      </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  -->
+</nav>

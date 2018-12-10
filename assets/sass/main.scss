@@ -1,12 +1,11 @@
-@import '../vendor/materialize-src/sass/materialize';
+$enable-shadows: true;
 
-// Utils
-@import 'utils/spacing';
+
+@import '../vendor/bootstrap-4.0.0/scss/bootstrap';
 
 // Components
 @import 'article';
 @import 'card-stack';
-@import 'footer';
 
 // Main Layout
 body {

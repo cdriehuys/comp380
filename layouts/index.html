@@ -1,36 +1,24 @@
 {{ define "main" }}
-  <section class="blue py-5" id="intro">
-    <div class="container center-align">
-      <i class="material-icons large grey-text text-darken-4">lock</i>
-      <h1 class="grey-text text-darken-3">{{ .Params.tagline }}</h1>
-      <p class="grey-text text-darken-4 flow-text">
-        {{ .Params.lead }}
-      </p>
+  <section class="bg-primary py-5 text-center" id="intro">
+    <div class="container">
+      <h1 class="display-4">{{ .Params.tagline }}</h1>
+      <p class="lead">{{ .Params.lead }}</p>
     </div>
   </section>
 
-  <section class="grey lighten-3 py-5">
+  <section class="bg-light py-5 text-center">
     <div class="container">
-      <h3 class="center-align">Has Your Data Been Leaked?</h3>
-
-      <p class="flow-text">
+      <h2 class="h1">Has Your Data Been Leaked?</h2>
+      <p>
         Check if any data associated with your email address has been exposed using
         <a href="https://haveibeenpwned.com/" rel="noopener noreferrer" target="_blank">Have I Been Pwned</a>.
       </p>
 
       <div id="hibp-form" style="display: none;">
-        <div class="row">
-          <form>
-            <div class="input-field inline col s12 m6 offset-m2 l5 offset-l3">
-              <input class="validate" id="email" name="email" type="email">
-              <label for="email">Email Address</label>
-            </div>
-
-            <div class="col s12 m2 l1 center-align">
-              <button class="btn btn-large blue" type="submit">Submit</button>
-            </div>
-          </form>
-        </div>
+        <form class="form-inline d-flex justify-content-center">
+          <input class="form-control mb-2 mr-sm-2" name="email" placeholder="me@example.com" type="email">
+          <button class="btn btn-primary mb-2" type="submit">Submit</button>
+        </form>
       </div>
     </div>
   </section>

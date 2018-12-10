@@ -1,3 +1,7 @@
-.card-stack > .card:last-child {
+.card-stack > * {
+  margin-bottom: 1em;
+}
+
+.card-stack > *:last-child {
   margin-bottom: 0;
 }

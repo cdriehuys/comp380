@@ -1,20 +1,20 @@
 {{ define "main" }}
   <section class="container">
-    <h1>{{ .Title }}</h1>
+    <h1 class="display-4 mt-3 mb-5">{{ .Title }}</h1>
 
     {{ with .Content }}
-      <div>
+      <div class="lead">
         {{ . }}
       </div>
     {{ end }}
 
     {{ range .Pages }}
-      <div class="card my-4">
-        <div class="card-content">
-          <span class="card-title">
+      <div class="card my-4 shadow">
+        <div class="card-body">
+          <h2 class="card-title">
             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          </span>
-          <p>{{ .Description }}</p>
+          </h2>
+          <p class="card-text">{{ .Description }}</p>
         </div>
       </div>
     {{ end }}

@@ -1,28 +1,16 @@
 .article {
   font-size: 1.15em;
   line-height: 1.618;
+  margin-bottom: 3em;
 
-  & ul {
-    margin-left: 1em;
-
-    & li {
-      list-style: disc inside;
-
-      & li {
-        list-style-type: circle;
-
-        & li {
-          list-style-type: square;
-
-          & li {
-            list-style-type: '– ';
-          }
-        }
-      }
-    }
+  & .footnotes {
+    font-size: 1rem;
+    line-height: 1;
   }
 }
 
 .article__title {
-  margin-bottom: 1em;
+  @extend .display-4;
+
+  margin: .5em 0;
 }

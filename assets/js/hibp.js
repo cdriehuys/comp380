@@ -30,11 +30,11 @@ function displayBreaches(resultsPanel, email, data) {
     isForm = 'are';
   }
 
-  resultsPanel.addClass('red darken-4 grey-text text-lighten-2');
+  resultsPanel.addClass('bg-danger text-white');
 
   // Update Header
   var header = resultsPanel.find('h3');
-  header.addClass('text-lighten-1');
+  header.addClass('mb-3');
   header.text('Found Data ' + breachNounTitle);
 
   // Add message
@@ -51,11 +51,11 @@ function displayBreaches(resultsPanel, email, data) {
     var breach = data[key];
 
     cardContainer.append($(
-      '<div class="card blue-grey darken-4">' +
-        '<div class="card-content">' +
-          '<span class="card-title">' + breach.Title + '</span>' +
-          '<p>' + breach.Description + '</p>' +
-          '<p class="pt-3">' +
+      '<div class="card bg-light text-dark text-left">' +
+        '<div class="card-body">' +
+          '<h3 class="card-title">' + breach.Title + '</h3>' +
+          '<p class="card-text">' + breach.Description + '</p>' +
+          '<p class="card-text">' +
             '<strong>Information:</strong> ' + breach.DataClasses.join(', ') +
           '</p>' +
         '</div>' +
@@ -73,8 +73,10 @@ function displayBreaches(resultsPanel, email, data) {
  */
 function displayNoBreaches(resultsPanel, email) {
   // Update Header
-  resultsPanel.find('h3').text('No Breaches Found');
-  resultsPanel.addClass('green');
+  var heading = resultsPanel.find('h3');
+  heading.text('No Breaches Found');
+  heading.addClass('mb-3');
+  resultsPanel.addClass('bg-success text-white');
 
   // Add body message
   var text = $(
@@ -94,7 +96,7 @@ function displayNoBreaches(resultsPanel, email) {
  */
 function getBreachesForEmail(email, resultsFrame) {
   resultsFrame.empty();
-  var panel = $('<div class="card-panel z-depth-3 p-3"><h3 class="my-0 center-align">Loading...</h3></div>');
+  var panel = $('<div class="card mt-3 p-3"><h3 class="my-0 h2 center-align">Loading...</h3></div>');
   resultsFrame.append(panel);
 
   $.ajax(
