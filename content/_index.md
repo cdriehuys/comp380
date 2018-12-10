@@ -2,24 +2,23 @@
 title: They Want Your Data
 tagline: Do You Know Where Your Data Is?
 lead: >
-  This is some generic lead in text that captures the reader and encourages them
-  to read more.
+  More than 170 million people had their data stolen in 2017. What can you do to
+  minimize your risk?
 ---
 
-## Data Security in a Digital Culture
+In 2017, [over 170 million people had their data breached][data-breaches-2017],
+and inn the first half of 2018 alone, there have been
+[at least 10 major data breaches][data-breaches-2018]. Our lifestyle is becoming
+increasingly dependent on digital communications, communications that often
+contain personally identifying information. As data gets sent and collected on
+larger and larger scales, the potential for data breaches also rises.
 
-In the first half of 2018 alone, there have been
-[at least 10 major data breaches][data-breaches]. This is just a symptom of a 
-larger problem. As I continue to ramble here, I will continue to make points
-indicating how companies are gathering increasing amounts of personal
-information. The increased amounts and specificity of the gathered information
-creates a lucrative target for hackers. Whether through shoddy security 
-practices or the actions of a determined attacker, this data is finding its way 
-into the hand of malicious actors with increasing frequency.
-
-We will provide resources to help people better understand the types of data 
-being collected, what this data is used for, and ways they can protect
-themselves.
+While the companies that collect users' data hold the primary responsibility for
+securing that data, there are also steps that users can take to ensure that they
+minimize the fallout of a single breach. The goal of this website is to educate
+those who collect the data on best practices, and to inform consumers on the
+internet on how they can stay safe.
 
 
-[data-breaches]: https://blog.barkly.com/biggest-data-breaches-2018-so-far
+[data-breaches-2017]: https://www.statista.com/statistics/273550/data-breaches-recorded-in-the-united-states-by-number-of-breaches-and-records-exposed/
+[data-breaches-2018]: https://blog.barkly.com/biggest-data-breaches-2018-so-far

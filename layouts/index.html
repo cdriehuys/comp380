@@ -1,6 +1,7 @@
 {{ define "main" }}
-  <section class="bg-primary py-5 text-center" id="intro">
-    <div class="container">
+  <section class="bg-primary text-light py-5 text-center" id="intro">
+    <div class="container text-shadow">
+      <span class="material-icons d-block mb-3" style="font-size: 64px;">lock</span>
       <h1 class="display-4">{{ .Params.tagline }}</h1>
       <p class="lead">{{ .Params.lead }}</p>
     </div>
@@ -24,7 +25,8 @@
   </section>
 
   <section class="container py-5">
-    <div class="flow-text">
+    <div class="article">
+      <h2 class="text-center">Our Mission</h2>
       {{ .Content }}
     </div>
   </section>
