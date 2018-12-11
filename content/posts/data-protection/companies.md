@@ -2,6 +2,7 @@
 title: Data Protection by Companies
 menu:
   main:
+    name: By Companies
     parent: Data Protection
 ---
 
