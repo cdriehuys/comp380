@@ -10,6 +10,8 @@ advertisements tailored to a specific user's interests. By collecting data on
 other pages the user has visited or products the user has purchased, the company
 can deliver the advertisement most likely to produce a sale.
 
+{{<figure src="social-media.jpg" >}}
+
 ## Methods
 
 There are various methods that companies can employ to track user behavior.
@@ -55,6 +57,8 @@ The simplicity of being an image is also the downside of tracking pixels. There
 is not a lot of information that can be gathered with a simple image without
 employing more complicated techniques. As a result, tracking pixels, although
 still used, are not the primary source of collected data.
+
+{{< youtube id="z5BeNCBpRNs" >}}
 
 ## Using the Data
 

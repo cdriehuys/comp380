@@ -14,6 +14,7 @@
   }
 
   & figure {
+    margin: 2em 0;
     width: 100%;
 
     & > img {
@@ -24,6 +25,12 @@
       margin: 0 auto;
       max-width: 100%;
     }
+  }
+
+  // This only targets YouTube videos for now since they're the only divs in our
+  // articles, but this is for sure a hack.
+  & div {
+    margin: 2em 0;
   }
 
   & .footnotes {
