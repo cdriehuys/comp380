@@ -14,9 +14,9 @@ These websites should be protecting the user accounts. For example, a company th
 
 Having secure accounts is probably the top priority for companies data security, but there is also the matter of keeping their data secure, Or is there? For example, if someone provides their information to a company (Name, address, phone number, email, etc) then you should expect this information to be kept private from the world. It is important to know the policies of companies you give information to. While not everyone reads the 'Terms and Conditions', it may be smart to check how they are storing your data. It could be a security risk and lead to identity theft if someone has all of this information. At the very least, it is annoying to get spam mail, phone calls and emails.
 
-{{<figure src="https://am23.akamaized.net/tms/cnt/uploads/2012/09/ps3thin_550.jpg" >}}
+{{< figure src="./ps4.jpg" >}}
 
-As a user it is important to know where your data is. Is the data at a company that is willing to sell its customer information to make a buck? Or is their security infrastructure weak enough where a hacker can get it regardless? In 2011, PlayStation was hacked and 77 million users' payment information was stolen [^playstation].These things are important to consider when you are making an account on a website, or clicking "I accept terms and agreements". As a consumer, you should make sure your priorities align with the comapny you are intrusting to protect your data. A study found possible discrepancies usually exist between company and user privacy priorities[^discrepancies].
+As a user it is important to know where your data is. Is the data at a company that is willing to sell its customer information to make a buck? Or is their security infrastructure weak enough where a hacker can get it regardless? In 2011, PlayStation was hacked and 77 million users' payment information was stolen [^playstation]. These things are important to consider when you are making an account on a website, or clicking "I accept terms and agreements". As a consumer, you should make sure your priorities align with the company you are intrusting to protect your data. A study found possible discrepancies usually exist between company and user privacy priorities[^discrepancies].
 
 ## When a Breach Happens, Here is How Companies Should Handle it
 
@@ -40,4 +40,4 @@ As the company continues to work with urgency to patch the breach, they should c
     Article discussing necessity to disclose breaches.
     [Data Breach Disclosure 101](https://www.troyhunt.com/data-breach-disclosure-101-how-to-succeed-after-youve-failed/)
 
-[ps4]: https://am23.akamaized.net/tms/cnt/uploads/2012/09/ps3thin_550.jpg
+
