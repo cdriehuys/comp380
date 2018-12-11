@@ -2,6 +2,7 @@
 title: Consumer Data Protection
 menu:
   main:
+    name: By the Consumer
     parent: Data Protection
 ---
 
