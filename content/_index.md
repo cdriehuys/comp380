@@ -13,6 +13,8 @@ increasingly dependent on digital communications, communications that often
 contain personally identifying information. As data gets sent and collected on
 larger and larger scales, the potential for data breaches also rises.
 
+{{<figure src="./c_lock.jpg">}}
+
 While the companies that collect users' data hold the primary responsibility for
 securing that data, there are also steps that users can take to ensure that they
 minimize the fallout of a single breach. The goal of this website is to educate

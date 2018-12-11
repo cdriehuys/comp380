@@ -26,6 +26,8 @@ While you want to identify the breach as urgently as possible, you also want to 
 
 The next priority is to disclose the breach. This is important for a couple of reasons. Concerning the users, they need to be told of the breach so they can take precautions to protect their data. In the instance of the PlayStation scandal, users with breached data would have wanted to cancel their credit cards [^playstation].
 
+{{<figure class="float-left" src="./stocks_dropping.jpg">}}
+
 From a perspective of PR for the company, they would want to disclose their breach instead of a news source. It is better to get ahead of it and take responsibility for the lack of security.
 
 As the company continues to work with urgency to patch the breach, they should continue to keep the user base up-to-date. When disclosing information they need to be very clear. There should be no ambiguity as to what to company means. Users should know what type of data has been breached, how big it was and be reassured the company is working hard to fix it [^how-to-succeed].
