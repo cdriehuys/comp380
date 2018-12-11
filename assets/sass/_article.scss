@@ -14,9 +14,12 @@
   }
 
   & figure {
+    width: 100%;
+
     & > img {
       @extend .shadow;
 
+      display: block;
       height: auto;
       margin: 0 auto;
       max-width: 100%;
