@@ -34,7 +34,7 @@
 
   // This only targets YouTube videos for now since they're the only divs in our
   // articles, but this is for sure a hack.
-  & div {
+  & > div {
     margin: 2em 0;
   }
 
