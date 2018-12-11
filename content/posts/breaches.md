@@ -34,10 +34,10 @@ occur in one of two ways.
 The first method is through an actual attack, or "hack". This is a method in
 which malicious actors decide they want access to a party's data, and actively
 attempt to gain access using vulnerabilities in the data owner's security
-measures. Attacks are often performed so that the stolen data can be sold.
-[^myspace] As we transport higher quantities of identifying information over the
-internet, the profitability of stealing that data also increases, since the
-information can be used to steal identities or hack into other profitable
+measures. Attacks are often performed so that the stolen data can be
+sold.[^myspace] As we transport higher quantities of identifying information
+over the internet, the profitability of stealing that data also increases, since
+the information can be used to steal identities or hack into other profitable
 locations such as bank accounts.
 
 The second method is through poor security, a method that has become more

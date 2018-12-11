@@ -1,9 +1,8 @@
 ---
 title: Consumer Data Protection
-description:
-  As users of internet services, there are steps you can take to minimize the
-  risk of eventual leaks. While you have little control over stopping the
-  breaches from occurring, you can diminish their impact.
+menu:
+  main:
+    parent: Data Protection
 ---
 
 ## How can consumers protect themselves in our online world?

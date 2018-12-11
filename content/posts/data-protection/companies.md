@@ -1,10 +1,8 @@
 ---
 title: Data Protection by Companies
-description: >
-  As the party collecting data, companies have a responsibility to secure that
-  data to the best of their ability. A large number of breaches have been
-  caused by publicly exposing servers with sensitive data or not taking
-  security threats seriously.
+menu:
+  main:
+    parent: Data Protection
 ---
 
 * Follow best practices for security
